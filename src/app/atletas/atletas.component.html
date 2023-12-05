@@ -1,0 +1,36 @@
+<h1>Atletas</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Club</th>
+        <th scope="col">Dni</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>12345</td>
+        <button type="button" class="btn btn-outline-success" [routerLink]="['/atletas',' pep ']">Detalle</button>
+        <button type="button" class="btn btn-outline-primary">Editar</button>
+        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>345456</td>
+        <button type="button" class="btn btn-outline-success"  [routerLink]="['/atletas',' jose ']" >Detalle</button>
+        <button type="button" class="btn btn-outline-primary">Editar</button>
+        <button type="button" class="btn btn-outline-danger">Eliminar</button>
+    </tr>
+      
+    </tbody>
+  </table>
