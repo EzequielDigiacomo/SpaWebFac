@@ -1,36 +1,31 @@
-<h1>Atletas</h1>
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Club</th>
-        <th scope="col">Dni</th>
-        <th scope="col">Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>12345</td>
-        <button type="button" class="btn btn-outline-success" [routerLink]="['/atletas',' pep ']">Detalle</button>
-        <button type="button" class="btn btn-outline-primary">Editar</button>
-        <button type="button" class="btn btn-outline-danger">Eliminar</button>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>345456</td>
-        <button type="button" class="btn btn-outline-success"  [routerLink]="['/atletas',' jose ']" >Detalle</button>
-        <button type="button" class="btn btn-outline-primary">Editar</button>
-        <button type="button" class="btn btn-outline-danger">Eliminar</button>
-    </tr>
-      
-    </tbody>
-  </table>
+<div>
+  <div class="atletasdiv">
+    <h1>Atletas</h1>
+  <button class="btn btn-primary" routerLink="/crear-atleta"> Agregar</button>
+  </div>
+  <table class="container">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Club</th>
+          <th scope="col">Dni</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let atlet of atletsList">
+          <th scope="row">{{atlet.id}}</th>
+          <td>{{atlet.nombre}}</td>
+          <td>{{atlet.apellido}}</td>
+          <td>{{atlet.club}}</td>
+          <td>{{atlet.dni}}</td>
+          <button type="button" class="btn btn-outline-success" [routerLink]="['/atletas', atlet.id]" >Detalle</button>
+          <button type="button" class="btn btn-outline-primary">Editar</button>
+          <button type="button" class="btn btn-outline-danger">Eliminar</button>
+        </tr>
+        
+      </tbody>
+    </table>
+</div>

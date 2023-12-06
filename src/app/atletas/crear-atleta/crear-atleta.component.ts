@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ApiServicesService } from 'src/app/services/api-services.service';
 
 @Component({
   selector: 'app-crear-atleta',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class CrearAtletaComponent {
 
+  
 }
