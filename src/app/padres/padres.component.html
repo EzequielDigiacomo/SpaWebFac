@@ -1,1 +1,31 @@
-<p>padres works!</p>
+<div>
+    <div class="padresDiv">
+      <h1>Padres</h1>
+    <button class="btn btn-primary" routerLink="/crear-padre"> Agregar</button>
+    </div>
+    <table class="container">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Acciones</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr *ngFor="let padre of padresList">
+            <th scope="row">{{padre.id}}</th>
+            <td>{{padre.nombrePadre}}</td>
+            <td>{{padre.apellidoPadre}}</td>
+            <td>{{padre.celularDelPadre}}</td>
+            <td>{{padre.dniPadre}}</td>
+            <button type="button" class="btn btn-outline-success" [routerLink]="['/padres', padre.id]" >Detalle</button>
+            <button type="button" class="btn btn-outline-primary">Editar</button>
+            <button type="button" class="btn btn-outline-danger">Eliminar</button>
+          </tr>
+          
+        </tbody>
+      </table>
+  </div>

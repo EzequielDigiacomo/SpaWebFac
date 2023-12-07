@@ -1,5 +1,5 @@
 <div class="container formulario">
-    <form>
+    <form [formGroup]="form" (submit)="enviarPostAtleta()">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"  >Nombre</label>
           <input type="text" class="form-control" formControlName="nombre">
@@ -10,78 +10,78 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nacionalidad</label>
-            <input type="text" class="form-control" FormControlName="nacionalidad">
+            <input type="text" class="form-control" formControlName="nacionalidad">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Dni</label>
-            <input type="text" class="form-control" FormControlName="dni">
+            <input type="text" class="form-control" formControlName="dni">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Numero de pasaporte</label>
-            <input type="text" class="form-control" FormControlName="numeroDePasaporte" >
+            <input type="text" class="form-control" formControlName="numeroDePasaporte" >
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Direccion</label>
-            <input type="text" class="form-control" FormControlName="direccion">
+            <input type="text" class="form-control" formControlName="direccion">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email Del Atleta</label>
-            <input type="email" class="form-control" FormControlName="emailDelAtleta" >
+            <input type="email" class="form-control" formControlName="emailDelAtleta" >
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Fecha De Nacimiento</label>
-            <input type="datetime" class="form-control" FormControlName="fechaDeNacimientoDelAtleta">
+            <input type="datetime" class="form-control" formControlName="fechaDeNacimientoDelAtleta">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Celular Del Atleta</label>
-            <input type="text" class="form-control" FormControlName="celularDelAtleta" >
+            <input type="text" class="form-control" formControlName="celularDelAtleta" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Club</label>
-            <input type="text" class="form-control" FormControlName="club" >
+            <input type="text" class="form-control" formControlName="club" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Obra Social</label>
-            <input type="text" class="form-control" FormControlName="obraSocial" >
+            <input type="text" class="form-control" formControlName="obraSocial" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Numero de Obra Social</label>
-            <input type="text" class="form-control" FormControlName="numeroCarnetObraSocial" >
+            <input type="text" class="form-control" formControlName="numeroCarnetObraSocial" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Permiso de viaje</label>
-            <input type="text" class="form-control" FormControlName="permisoDeViaje" >
+            <input type="text" class="form-control" formControlName="permisoDeViaje" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Beca</label>
-            <input type="text" class="form-control" FormControlName="beca" >
+            <input type="text" class="form-control" formControlName="beca" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Dni Frontal </label>
-            <input type="text" class="form-control" FormControlName="fotoDniFrontal" >
+            <input type="text" class="form-control" formControlName="fotoDniFrontal" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Dni Dorsal </label>
-            <input type="text" class="form-control" FormControlName="fotoDniDorsal" >
+            <input type="text" class="form-control" formControlName="fotoDniDorsal" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Pasaporte Frontal </label>
-            <input type="text" class="form-control" FormControlName="fotoPasaporteFrontal" >
+            <input type="text" class="form-control" formControlName="fotoPasaporteFrontal" >
           </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Pasaporte Dorsal </label>
-            <input type="text" class="form-control" FormControlName="fotoPasaporteDorsal" >
+            <input type="text" class="form-control" formControlName="fotoPasaporteDorsal" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Madre del Atleta (id)</label>
-            <input type="text" class="form-control" FormControlName="madreAtletaId" >
+            <input type="text" class="form-control" formControlName="madreAtletaId" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Padre del Atleta (id)</label>
-            <input type="text" class="form-control" FormControlName="padreAtletaId" >
+            <input type="text" class="form-control" formControlName="padreAtletaId" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Tutor del Atleta (id)</label>
-            <input type="text" class="form-control" FormControlName="tutorAtletaId" >
+            <input type="text" class="form-control" formControlName="tutorAtletaId" >
           </div>
           
 

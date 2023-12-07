@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IMadre } from 'src/app/models/madre.model';
 import { ApiServicesService } from 'src/app/services/api-services.service';
 
@@ -8,14 +9,44 @@ import { ApiServicesService } from 'src/app/services/api-services.service';
   templateUrl: './crear-madre.component.html',
   styleUrls: ['./crear-madre.component.css']
 })
-export class CrearMadreComponent implements OnInit{
+export class CrearMadreComponent{
 
- 
+  form : FormGroup ;
   
+  constructor(private formBuilder: FormBuilder ,private _apiServices: ApiServicesService, private _router: Router) {
+    this.form = this.formBuilder.group({
+      nombreMadre: [''],
+      apellidoMadre: [''],
+      dniMadre: [''],
+      celularDeLaMadre: [''],
+      emailDeLaMadre: [''],
+      direccionDeLaMadre: [''],
+      fotoDniFrontalMadre: [''],
+      fotoDniDorsalMadre: [''],
+      idAtleta: ['', ],
 
-  ngOnInit(): void {
-   
+    })
   }
 
- 
+  public enviarPostMadre(){
+    this._apiServices.postMadre('https://localhost:7258/api/madreatleta', 
+    {
+      nombreMadre: this.form.value.nombreMadre,
+      apellidoMadre:this.form.value.apellidoMadre,
+      dniMadre: this.form.value.dniMadre,
+      celularDeLaMadre: this.form.value.celularDeLaMadre,
+      emailDeLaMadre: this.form.value.emailDeLaMadre,
+      direccionDeLaMadre: this.form.value.direccionDeLaMadre,
+      fotoDniFrontalMadre: this.form.value.fotoDniFrontalMadre,
+      fotoDniDorsalMadre: this.form.value.fotoDniDorsalMadre,
+      idAtleta: this.form.value.idAtleta,
+  
+
+  }
+    ).subscribe(respuesta => console.log('enviado'))
+      
+    this._router.navigate(['/'])
+  }
+
+
 }

@@ -13,7 +13,12 @@ import { DetalleAtletaComponent } from './atletas/detalle-atleta/detalle-atleta.
 import { CrearAtletaComponent } from './atletas/crear-atleta/crear-atleta.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CrearMadreComponent } from './madres/crear-madre/crear-madre.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetalleMadreComponent } from './madres/detalle-madre/detalle-madre.component';
+import { DetallePadreComponent } from './padres/detalle-padre/detalle-padre.component';
+import { CrearPadreComponent } from './padres/crear-padre/crear-padre.component';
+import { CrearTutorComponent } from './tutores/crear-tutor/crear-tutor.component';
+import { DetalleTutorComponent } from './tutores/detalle-tutor/detalle-tutor.component';
 
 
 @NgModule({
@@ -27,6 +32,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     DetalleAtletaComponent,
     CrearAtletaComponent,
     CrearMadreComponent,
+    DetalleMadreComponent,
+    DetallePadreComponent,
+    CrearPadreComponent,
+    CrearTutorComponent,
+    DetalleTutorComponent,
     
   ],
   imports: [
@@ -34,6 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
  
   ],
   providers: [],

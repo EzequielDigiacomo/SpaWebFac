@@ -1,5 +1,5 @@
 <div>
-    <div class="madresdiv">
+    <div class="madresDiv">
       <h1>Madres</h1>
     <button class="btn btn-primary" routerLink="/crear-madre"> Agregar</button>
     </div>
@@ -21,7 +21,7 @@
             <td>{{madre.apellidoMadre}}</td>
             <td>{{madre.celularDeLaMadre}}</td>
             <td>{{madre.dniMadre}}</td>
-            <button type="button" class="btn btn-outline-success" [routerLink]="['/atletas', madre.id]" >Detalle</button>
+            <button type="button" class="btn btn-outline-success" [routerLink]="['/madres', madre.id]" >Detalle</button>
             <button type="button" class="btn btn-outline-primary">Editar</button>
             <button type="button" class="btn btn-outline-danger">Eliminar</button>
           </tr>
