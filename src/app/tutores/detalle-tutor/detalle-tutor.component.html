@@ -1,1 +1,52 @@
-<p>detalle-tutor works!</p>
+
+<div class="container size  ">
+    <h3 class="fw-bold text-decoration-underline ">Detalle del tutor {{tutor?.apellidoTutor}}</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Identificador</th>
+          <td class="fst-italic">{{tutor?.id}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Nombre</th>
+          <td class="fst-italic">{{tutor?.nombreTutor}}</td> 
+        </tr>
+        <tr>
+          <th scope="col">Apellido</th>
+          <td class="fst-italic">{{tutor?.apellidoTutor}}</td>
+        </tr>
+        <tr>
+          <th scope="col">Dni</th>
+          <td class="fst-italic">{{tutor?.dniTutor }}</td> 
+        </tr>
+        <tr>
+          <th scope="col">Direccion</th>
+          <td class="fst-italic">{{tutor?.direccionDelTutor}}</td> 
+        </tr>
+        <tr>
+          <th scope="col">Email de la Madre</th>
+          <td class="fst-italic">{{tutor?.emailDelTutor}}</td> 
+        </tr>
+
+        <tr>
+          <th scope="col">Celular del Atleta</th>
+          <td class="fst-italic">{{tutor?.celularDelTutor}}</td> 
+        </tr>
+        <tr>
+          <th scope="col">Foto dni Frontal</th>
+          <td class="fst-italic">{{tutor?.fotoDniFrontalTutor}}</td> 
+        </tr>
+        <tr>
+          <th scope="col">Foto dni Dorsal</th>
+          <td class="fst-italic">{{tutor?.fotoDniDorsalTutor}}</td> 
+        </tr>
+        <tr>
+          <th scope="col"> Identificador del Atleta </th>
+          <td class="fst-italic">{{tutor?.idAtleta}}</td> 
+        </tr>
+      </thead>
+    </table>
+    <div class="detalleTutorButton">
+      <button type="button" class="btn btn-primary" routerLink="/tutores">Atras</button>
+    </div>
+  </div>

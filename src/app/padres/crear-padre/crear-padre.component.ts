@@ -9,10 +9,11 @@ import { ApiServicesService } from 'src/app/services/api-services.service';
   styleUrls: ['./crear-padre.component.css']
 })
 export class CrearPadreComponent {
-  form : FormGroup ;
+
+  formPadres : FormGroup ;
   
   constructor(private formBuilder: FormBuilder ,private _apiServices: ApiServicesService, private _router: Router) {
-    this.form = this.formBuilder.group({
+    this.formPadres = this.formBuilder.group({
       nombrePadre: [''],
       apellidoPadre: [''],
       dniPadre: [''],
@@ -26,24 +27,23 @@ export class CrearPadreComponent {
     })
   }
 
-  public enviarPostMPadre(){
-    this._apiServices.postMadre('https://localhost:7258/api/padreatleta', 
+  public enviarPostPadre(){
+    this._apiServices.postPadre('http://www.spawebfac.somee.com/api/padreatleta', 
     {
-      nombrePadre: this.form.value.nombrePadre,
-      apellidoPadre:this.form.value.apellidoPadre,
-      dniMaPadre: this.form.value.dniPadre,
-      celularDelPadre: this.form.value.celularDelPadre,
-      emailDelPadre: this.form.value.emailDelPadre,
-      direccionDelPadre: this.form.value.direccionDelPadre,
-      fotoDniFrontalPadre: this.form.value.fotoDniFrontalPadre,
-      fotoDniDorsalPadre: this.form.value.fotoDniDorsalPadre,
-      idAtleta: this.form.value.idAtleta,
-  
+      nombrePadre: this.formPadres.value.nombrePadre,
+      apellidoPadre:this.formPadres.value.apellidoPadre,
+      dniPadre: this.formPadres.value.dniPadre,
+      celularDelPadre: this.formPadres.value.celularDelPadre,
+      emailDelPadre: this.formPadres.value.emailDelPadre,
+      direccionDelPadre: this.formPadres.value.direccionDelPadre,
+      fotoDniFrontalPadre: this.formPadres.value.fotoDniFrontalPadre,
+      fotoDniDorsalPadre: this.formPadres.value.fotoDniDorsalPadre,
+      idAtleta: this.formPadres.value.idAtleta,
+    }
 
-  }
     ).subscribe(respuesta => console.log('enviado'))
       
-    this._router.navigate(['/'])
+    this._router.navigate(['/padres'])
   }
 
 }

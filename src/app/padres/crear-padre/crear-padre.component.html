@@ -1,40 +1,40 @@
-<div class="container madre formularioPadres">
-    <h1>Agregar Madre a Base de datos</h1>
-    <form [formGroup]="form" (submit)="enviarPostMPadre()">
+<div class="container formularioPadres">
+    <h1>Agregar Padre a Base de datos</h1>
+    <form [formGroup]="formPadres" (submit)="enviarPostPadre()">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"  >Nombre</label>
-          <input type="text" class="form-control" formControlName="nombreMadre">
+          <input type="text" class="form-control" formControlName="nombrePadre">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Apellido</label>
-          <input type="text" class="form-control" formControlName="apellidoMadre">
+          <input type="text" class="form-control" formControlName="apellidoPadre">
         </div>
   
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Dni</label>
-            <input type="text" class="form-control" formControlName="dniMadre">
+            <input type="text" class="form-control" formControlName="dniPadre">
           </div>
   
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Direccion</label>
-            <input type="text" class="form-control" formControlName="direccionDeLaMadre">
+            <input type="text" class="form-control" formControlName="direccionDelPadre">
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email de la madre</label>
-            <input type="email" class="form-control" formControlName="emailDeLaMadre" >
+            <label for="exampleInputEmail1" class="form-label">Email del Padre</label>
+            <input type="email" class="form-control" formControlName="emailDelPadre" >
           </div>
   
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Celular de la Madre</label>
-            <input type="text" class="form-control" formControlName="celularDeLaMadre" >
+            <label for="exampleInputEmail1" class="form-label">Celular del Padre</label>
+            <input type="text" class="form-control" formControlName="celularDelPadre" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Dni Frontal </label>
-            <input type="text" class="form-control" formControlName="fotoDniFrontalMadre" >
+            <input type="text" class="form-control" formControlName="fotoDniFrontalPadre" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Foto Dni Dorsal </label>
-            <input type="text" class="form-control" formControlName="fotoDniDorsalMadre" >
+            <input type="text" class="form-control" formControlName="fotoDniDorsalPadre" >
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Identificador del Atleta(id)</label>
@@ -42,7 +42,7 @@
           </div>
           
   
-        <button [disabled]="form.invalid" class="btn btn-primary mb-3">Guardar</button>
+        <button [disabled]="formPadres.invalid" class="btn btn-primary mb-3">Guardar</button>
   
         <div class="spinner-border text-primary" role="status">
           <span class="sr-only"></span>

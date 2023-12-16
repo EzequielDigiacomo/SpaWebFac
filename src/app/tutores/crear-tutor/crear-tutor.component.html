@@ -1,1 +1,54 @@
-<p>crear-tutor works!</p>
+<div class="container formularioMadres">
+    <h1>Agregar Tutor a Base de datos</h1>
+    <form [formGroup]="form" (submit)="enviarPostTutor()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"  >Nombre</label>
+          <input type="text" class="form-control" formControlName="nombreTutor">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Apellido</label>
+          <input type="text" class="form-control" formControlName="apellidoTutor">
+        </div>
+  
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Dni</label>
+            <input type="text" class="form-control" formControlName="dniTutor">
+          </div>
+  
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Direccion del celularDelTutor</label>
+            <input type="text" class="form-control" formControlName="direccionDelTutor">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email del Tutor</label>
+            <input type="email" class="form-control" formControlName="emailDelTutor" >
+          </div>
+  
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Celular de la Madre</label>
+            <input type="text" class="form-control" formControlName="celularDelTutor" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Foto Dni Frontal </label>
+            <input type="text" class="form-control" formControlName="fotoDniFrontalTutor" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Foto Dni Dorsal </label>
+            <input type="text" class="form-control" formControlName="fotoDniDorsalTutor" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Identificador del Atleta(id)</label>
+            <input type="text" class="form-control" formControlName="idAtleta" >
+          </div>
+          
+  
+        <button [disabled]="form.invalid" class="btn btn-primary mb-3" >Guardar</button>
+  
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only"></span>
+        </div>
+        
+     
+  
+      </form>
+  </div>

@@ -29,7 +29,7 @@ export class CrearMadreComponent{
   }
 
   public enviarPostMadre(){
-    this._apiServices.postMadre('https://localhost:7258/api/madreatleta', 
+    this._apiServices.postMadre('http://www.spawebfac.somee.com/api/madreatleta', 
     {
       nombreMadre: this.form.value.nombreMadre,
       apellidoMadre:this.form.value.apellidoMadre,
@@ -45,7 +45,7 @@ export class CrearMadreComponent{
   }
     ).subscribe(respuesta => console.log('enviado'))
       
-    this._router.navigate(['/'])
+    this._router.navigate(['/madres'])
   }
 
 

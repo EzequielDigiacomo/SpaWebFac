@@ -1,1 +1,33 @@
-<p>tutores works!</p>
+<div class="container">
+    <div class="tutoresDiv">
+      <h1>Tutores</h1>
+    <button class="btn btn-primary" routerLink="/crear-tutor"> Agregar</button>
+    </div>
+    <table class="container">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tutor of tutoresList">
+            <th scope="row">{{tutor.id}}</th>
+            <td>{{tutor.nombreTutor}}</td>
+            <td>{{tutor.apellidoTutor}}</td>
+            <td>{{tutor.celularDelTutor}}</td>
+            <td>{{tutor.dniTutor}}</td>
+            <button type="button" class="btn btn-outline-success" [routerLink]="['/tutores', tutor.id]" >Detalle</button>
+            <button type="button" class="btn btn-outline-primary" (click)="editarTutor(tutor.id)" >Editar</button>
+            <button type="button" class="btn btn-outline-danger" (click)="deleteTutor(tutor)">Eliminar</button>
+          </tr>
+          
+        </tbody>
+      </table>
+  </div>
+
+  <!-- [routerLink]="['/editar-tutor', tutor.id]" -->

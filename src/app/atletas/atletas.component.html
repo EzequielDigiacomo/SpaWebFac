@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <div class="atletasdiv">
     <h1>Atletas</h1>
   <button class="btn btn-primary" routerLink="/crear-atleta"> Agregar</button>
@@ -23,7 +23,7 @@
           <td>{{atlet.dni}}</td>
           <button type="button" class="btn btn-outline-success" [routerLink]="['/atletas', atlet.id]" >Detalle</button>
           <button type="button" class="btn btn-outline-primary">Editar</button>
-          <button type="button" class="btn btn-outline-danger">Eliminar</button>
+          <button type="button" class="btn btn-outline-danger" (click)="deleteAtleta(atlet)">Eliminar</button>
         </tr>
         
       </tbody>

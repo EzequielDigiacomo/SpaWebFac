@@ -5,6 +5,7 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 import { IAtleta } from '../models/atleta.model';
 import { IMadre } from '../models/madre.model';
 import { IPadre } from '../models/padre.model';
+import { ITutor } from '../models/tutor.model';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +45,7 @@ export class ApiServicesService {
   // ------------Delete ------------
 
   public deleteAtlet (id : number){
-    return this._httpClient.delete<IAtleta>(`${this.urlAtleta} / ${id}`)
+    return this._httpClient.delete<IAtleta>(`${this.urlAtleta}/${id}`)
   }
 
 
@@ -83,7 +84,7 @@ export class ApiServicesService {
   // ------------Delete ------------
 
   public deleteMadre (id : number){
-    return this._httpClient.delete<IMadre>(`${this.urlMadre} / ${id}`)
+    return this._httpClient.delete<IMadre>(`${this.urlMadre}/${id}`)
   }
 
 
@@ -103,8 +104,8 @@ export class ApiServicesService {
 
 
   // ------------Post ------------
-  public newPadre(madre : IMadre): Observable<IPadre>{
-    return this._httpClient.post<IPadre>(`${this.urlPadre}`,madre)
+  public newPadre(padre : IMadre): Observable<IPadre>{
+    return this._httpClient.post<IPadre>(`${this.urlPadre}`,padre)
   }
 
   public postPadre( urlPadre: string, body:any ){
@@ -113,18 +114,61 @@ export class ApiServicesService {
   }
 
   // ------------Put ------------
-  public updatePadre( id: number ,madre : IPadre) : Observable<IPadre>{
-    return this._httpClient.put<IPadre>(`${this.urlPadre}/${id}`, madre)
+  public updatePadre( id: number ,padre : IPadre) : Observable<IPadre>{
+    return this._httpClient.put<IPadre>(`${this.urlPadre}/${id}`, padre)
   }
 
   // ------------Delete ------------
 
   public deletePadre (id : number){
-    return this._httpClient.delete<IPadre>(`${this.urlPadre} / ${id}`)
+    return this._httpClient.delete<IPadre>(`${this.urlPadre}/${id}`)
   }
 
 
 
+  //---------------------------------Tutor-----------------------------------
+
+  private urlTutor = 'https://localhost:7258/api/tutoratleta'
+
+  // ------------ Get all ------------
+  public getAllTutores(): Observable<ITutor[]> {
+    return this._httpClient.get<ITutor[]>(this.urlTutor)
+  }
+  
+  // ------------Get one ------------
+  public getTutorById(id : number): Observable<ITutor>{
+    return this._httpClient.get<ITutor>(`${this.urlTutor}/${id}`)
+  }
+
+  public getSingleTutor(id: number):Observable<ITutor>{
+    return this._httpClient.get<ITutor>(this.urlTutor)
+  }
+
+
+  // ------------Post ------------
+  public newTutor(tutor : ITutor): Observable<ITutor>{
+    return this._httpClient.post<ITutor>(`${this.urlTutor}`,tutor)
+  }
+
+  public postTutor( urlTutor: string, body:any ){
+    return this._httpClient.post(urlTutor, body)
+  }
+
+  // ------------Put ------------
+  public updateTutor( id: number, tutor : ITutor) : Observable<ITutor>{
+    return this._httpClient.put<ITutor>(`${this.urlTutor}/${id}`,tutor)
+  }
+
+  public editarTutor(tutor : ITutor):Observable<ITutor>{
+  
+    return this._httpClient.put<ITutor>(this.urlTutor, tutor)
+  }
+
+  // ------------Delete ------------
+
+  public deleteTutor(id : number){
+    return this._httpClient.delete<ITutor>(`${this.urlTutor}/${id}`)
+  }
 
 
 

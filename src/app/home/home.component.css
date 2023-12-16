@@ -1,0 +1,17 @@
+.containerStyles{
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    
+}
+
+.titulo {
+    margin: 2rem;
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

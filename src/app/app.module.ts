@@ -19,6 +19,10 @@ import { DetallePadreComponent } from './padres/detalle-padre/detalle-padre.comp
 import { CrearPadreComponent } from './padres/crear-padre/crear-padre.component';
 import { CrearTutorComponent } from './tutores/crear-tutor/crear-tutor.component';
 import { DetalleTutorComponent } from './tutores/detalle-tutor/detalle-tutor.component';
+import { EditarAtletaComponent } from './atletas/editar-atleta/editar-atleta.component';
+import { EditarMadreComponent } from './madres/editar-madre/editar-madre.component';
+import { EditarPadreComponent } from './padres/editar-padre/editar-padre.component';
+import { EditarTutorComponent } from './tutores/editar-tutor/editar-tutor.component';
 
 
 @NgModule({
@@ -37,6 +41,10 @@ import { DetalleTutorComponent } from './tutores/detalle-tutor/detalle-tutor.com
     CrearPadreComponent,
     CrearTutorComponent,
     DetalleTutorComponent,
+    EditarAtletaComponent,
+    EditarMadreComponent,
+    EditarPadreComponent,
+    EditarTutorComponent,
     
   ],
   imports: [

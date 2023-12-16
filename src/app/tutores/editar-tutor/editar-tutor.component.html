@@ -1,0 +1,69 @@
+<div class="container size  ">
+    <h3 class="fw-bold text-decoration-underline ">Detalle del tutor {{tutor?.apellidoTutor}}</h3>
+    <form [formGroup]="editarForm">
+        <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Identificador</th>
+            <td class="fst-italic">{{tutor?.id}}</td>
+            </tr>
+            <tr>
+            <th scope="col">Nombre</th>
+            <td>{{tutor?.nombreTutor}}</td>
+            <input type="text" class="form-control" formControlName="nombreTutor">
+            </tr>
+            <tr>
+            <th scope="col">Apellido</th> 
+            <td>{{tutor?.apellidoTutor}}</td>
+            <input type="text" class="form-control" formControlName="apellidoTutor">
+            </tr>
+            <tr>
+            <th scope="col">Dni</th>
+            <td>{{tutor?.dniTutor}}</td>
+            <input type="text" class="form-control" formControlName="dniTutor">
+            </tr>
+            <tr>
+            <th scope="col">Direccion</th>
+            <td>{{tutor?.direccionDelTutor}}</td>
+            <input type="text" class="form-control" formControlName="direccionDelTutor">
+            </tr>
+            <tr>
+            <th scope="col">Email del Tutor</th>
+            <td>{{tutor?.emailDelTutor}}</td>
+            <input type="text" class="form-control" formControlName="nombreTutor">
+            </tr>
+
+            <tr>
+            <th scope="col">Celular del Tutor</th>
+            <td>{{tutor?.celularDelTutor}}</td>
+
+            <input type="text" class="form-control" formControlName="celularDelTutor">
+            </tr>
+            <tr>
+            <th scope="col">Foto dni Frontal</th>
+            <td>{{tutor?.fotoDniFrontalTutor}}</td>
+
+            <input type="text" class="form-control" formControlName="fotoDniFrontalTutor">
+            </tr>
+            <tr>
+            <th scope="col">Foto dni Dorsal</th>
+            <td>{{tutor?.fotoDniDorsalTutor}}</td>
+
+            <input type="text" class="form-control" formControlName="fotoDniDorsalTutor">
+            </tr>
+            <tr>
+            <th scope="col"> Identificador del Atleta </th>
+            <td>{{tutor?.idAtleta}}</td>
+
+            <input type="text" class="form-control" formControlName="idAtleta">
+            </tr>
+        </thead>
+        </table>
+
+        <div class="detalleTutorButton">
+          <button type="button" class="btn btn-primary" routerLink="/tutores">Atras</button>
+          <button type="submit" class="btn btn-success" routerLink="/tutores" >Guardar</button>
+        </div>
+    </form>
+
+  </div>

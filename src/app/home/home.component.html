@@ -1,5 +1,21 @@
-<div class="container">
-    <p>home works!</p>
-    <h3>total de atletas en la DB {{atletsList.length}}</h3>
-       
+
+
+<div class="alert alert-primary" role="alert">
+    Atletas registrados en la base de datos  {{atletsList.length}}
+    <button routerLink="/atletas" class="btn btn-primary">Ir</button>
+  </div>
+
+  <div class="alert alert-secondary" role="alert">
+    Madres registradas en la base de datos  {{madresList.length}}
+    <button routerLink="/madres" class="btn btn-primary">Ir</button>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    Padres registrados en la base de datos  {{padresList.length}}
+    <button routerLink="/padres" class="btn btn-primary">Ir</button>
 </div>
+  <div class="alert alert-danger" role="alert">
+    Tutores registrados en la base de datos  {{tutoresList.length}}
+    <button routerLink="/tutores" class="btn btn-primary">Ir</button>
+  </div>
+  

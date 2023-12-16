@@ -19,4 +19,13 @@ export class AtletasComponent implements OnInit {
       this.atletsList = data
     })
   }
+
+  //-------Eliminar registro Atleta de api
+  deleteAtleta(atleta: IAtleta){
+    this._apiServices.deleteAtlet(atleta.id).subscribe(
+      res=>this._apiServices.getAllAtlets().subscribe(
+        response=>this.atletsList =response
+      )
+    )
+  }
 }

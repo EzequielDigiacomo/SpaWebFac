@@ -41,7 +41,7 @@ export class CrearAtletaComponent {
   }
 
   public enviarPostAtleta(){
-    this._apiServices.postAtleta('https://localhost:7258/api/atleta', 
+    this._apiServices.postAtleta('http://www.spawebfac.somee.com/api/atleta', 
     {
       nombre: this.form.value.nombre,
       apellido:this.form.value.apellido,

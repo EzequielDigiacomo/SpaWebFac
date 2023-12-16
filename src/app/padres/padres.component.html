@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <div class="padresDiv">
       <h1>Padres</h1>
     <button class="btn btn-primary" routerLink="/crear-padre"> Agregar</button>
@@ -22,8 +22,8 @@
             <td>{{padre.celularDelPadre}}</td>
             <td>{{padre.dniPadre}}</td>
             <button type="button" class="btn btn-outline-success" [routerLink]="['/padres', padre.id]" >Detalle</button>
-            <button type="button" class="btn btn-outline-primary">Editar</button>
-            <button type="button" class="btn btn-outline-danger">Eliminar</button>
+            <button type="button" class="btn btn-outline-primary" >Editar</button>
+            <button type="button" class="btn btn-outline-danger" (click)="deletePadre(padre)">Eliminar</button>
           </tr>
           
         </tbody>

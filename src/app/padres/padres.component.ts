@@ -19,4 +19,13 @@ export class PadresComponent {
       this.padresList = data
     })
   }
+
+  //-------Eliminar registro Padre de api
+  deletePadre(padre: IPadre){
+    this._apiServices.deletePadre(padre.id).subscribe(
+      res=>this._apiServices.getAllPadres().subscribe(
+        response=>this.padresList =response
+      )
+    )
+  }
 }

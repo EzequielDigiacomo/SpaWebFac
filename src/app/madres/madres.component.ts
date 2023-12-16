@@ -19,5 +19,14 @@ export class MadresComponent {
       this.madresList = data
     })
   }
+
+   //-------Eliminar registro Madre de api
+   deleteMadre(madre: IMadre){
+    this._apiServices.deleteMadre(madre.id).subscribe(
+      res=>this._apiServices.getAllMadres().subscribe(
+        response=>this.madresList =response
+      )
+    )
+  }
     
 }
